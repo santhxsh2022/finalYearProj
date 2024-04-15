@@ -1,0 +1,578 @@
+.centerit {
+    text-align: center; /* Align text horizontally */
+    margin: 50px auto; /* Add space above and below the element */
+    padding: 20px; /* Add padding */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 80%; /* Optional: Set maximum width for the centered content */
+    background-color: #FFFD37; /* Subtle grey background color */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+	color:black;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #1a1a1a;
+    color: #E1DFEA;
+    font-family: 'montserrat', sans-serif; /* Use Roboto font for the entire website */
+
+}
+
+}
+}
+
+header {
+    background-color: #d8d8d7;
+    height: 100px; /* Set the desired height */
+    text-align: left;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    transition: margin-left 0.5s ease;
+    color: black;
+}
+
+
+
+#companyLogo {
+    width: 300px;
+    height: auto;
+    margin-left: 70px;
+    position: relative;
+    top: 10px; /* Adjust the top position as needed */
+}
+
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #d8d8d7;
+    border-radius: 35%;
+    position: relative;
+    top: 18px;
+    margin-left:20px;
+}
+
+#toggleImage {
+    width: 25px;
+    height: auto;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.9); /* Added transparency */
+    padding-top: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.sidebar a:hover {
+    color: #4CAF50;
+}
+
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style for the productsSub container */
+.productsSub {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the productsSub items */
+.productsSub li {
+    padding: 10px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+/* Change color on hover for the productsSub items */
+.productsSub li:hover {
+    color: #f1f1f1;
+}
+
+/* Show productsSub when clicking on the parent */
+.sidebar-parent.active .productsSub {
+    display: block;
+}
+
+.content {
+    margin-left: 0;
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+
+.content-shifted {
+    margin-left: 250px; /* Adjust the value based on your sidebar width */
+}
+
+.sidebar.show {
+    width: 250px;
+}
+
+.sidebar.show a {
+    opacity: 1;
+}
+
+.wallpaper {
+    position: relative;
+    background-image: url('wp1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Adjust the height as needed */
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text-container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+.text-container p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    height: 390px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+/* Add previous and next buttons */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: #555;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+
+
+
+/*Home page contents*/
+.home-div1{
+	align:right;
+}
+
+
+
+section {
+    padding: 20px;
+}
+
+.section2 .container {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  .section2 .container .items {
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 12px;
+  }
+  .section2 .container .items .name {
+    text-align: center;
+    background-color: rgb(240, 197, 6);
+    height: 25px;
+    padding-top: 4px;
+    color: white;
+    margin: 0;
+  }
+  .section2 .container .items .price {
+    float: left;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    font-weight: 650;
+  }
+  .section2 .container .items .info {
+    padding-left: 10px;
+    color: rgb(243, 168, 7);
+  }
+  .section2 .container .items .img img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    transition-duration: 0.8s;
+  }
+  .section2 .container .items .img {
+    overflow: hidden;
+    margin: 0;
+  }
+  .section2 .container .items:hover .img img {
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+    border-radius: 12px;
+  }
+
+footer {
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
+}
+
+.hero {
+    background: url('background-image.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Map Embed link */
+
+.google-map {
+     padding-bottom: 50%;
+     position: relative;
+}
+
+.google-map iframe {
+     height: 75%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+}
+
+
+
+/* About Us page CSS */
+
+.about-main{
+    background-color: #ffa500;
+    color:black;
+}
+
+
+
+/* Products module css */
+/* Remove underline from product titles */
+.name {
+    text-decoration: none;
+}
+
+/* Remove underline from product descriptions */
+.info {
+    text-decoration: none;
+}
+
+
+
+
+
+/*PRODUCTS DETAIL PAGE*/
+/*PRODUCTS DETAIL PAGE*/
+/*PRODUCTS DETAIL PAGE*/
+/*PRODUCTS DETAIL PAGE*/
+/*PRODUCTS DETAIL PAGE*/
+
+
+/* Your additional CSS styles can go here */
+/* Example CSS for basic layout */
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+}
+
+.product-image {
+    width: 300px; /* Adjust as needed */
+    margin-right: 20px;
+    padding-left: 100px;
+}
+
+.product-details {
+    flex: 1;
+    padding-left:100px;
+}
+.description p {
+        text-align: justify; /* Adjust as needed */
+    }
+
+/* Additional styles */
+.related-products {
+    margin-top: 30px;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.share-buttons {
+    margin-top: 20px;
+}
+
+    .share-buttons a {
+        margin-right: 10px;
+    }
+
+
+/* submit button */
+.submit-button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Add this CSS to your existing stylesWings.css file */
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d8d8d7; /* Adjust as needed */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the icons to the right */
+}
+
+.header-icon {
+    margin-left: 10px;
+}
+
+.cart-count {
+    background-color: #ff0000; /* Adjust color as needed */
+    color: #ffffff; /* Adjust color as needed */
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* Adjust styles for cart and profile icons as needed
+.cart-icon img,
+.profile-icon img {
+    width: 30px; /* Adjust size as needed
+    height: 30px; /* Adjust size as needed
+}
+*/
+
+
+
+
+
+/*ADD TO CART */
+/*ADD TO CART */
+/*ADD TO CART */
+/*ADD TO CART */
+/*ADD TO CART */
+
+
+
+
+.add-to-cart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 0;
+}
+
+    .add-to-cart-btn img {
+        width: 32px; /* Adjust the size as needed */
+        height: 32px;
+    }
+
+
+
+/*about us*/
+
+.services {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+/* Optional: Add more styling as needed */
+
+
+
+
+
+
+/* Related prods */
+*{
+	box-sizing: border-box;
+}
+.rel-product{
+	float: left;
+	width: 25%;
+	padding:50px;
+}
+.related-products:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/*REVIEW*/
+#form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 20px; /* Adjusted padding for better spacing */
+    border: 1px solid black;
+    max-width: 800px; /* Added max-width for better responsiveness */
+    margin: 0 auto; /* Center the form on the page */
+}
+
+#form-details form {
+    width: 100%; /* Utilize the full width of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements horizontally */
+}
+
+#form-details form input,
+#form-details form textarea {
+    width: calc(100% - 30px); /* Adjusted width to account for padding */
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+#form-details form button {
+    background-color: #088178;
+    color: #fff;
+    border: none; /* Remove default button border */
+    padding: 10px 20px; /* Added padding for better button appearance */
+    cursor: pointer; /* Add cursor pointer to indicate interactivity */
+}
+
+/* Optional: Add hover effect to button */
+#form-details form button:hover {
+    background-color: #075c4e; /* Darker shade when hovered */
+}
+

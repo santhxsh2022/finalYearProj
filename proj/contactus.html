@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings Engineering - Electrical Goods</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesWings.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button onclick="toggleSidebar()" id="toggleButton" class="toggle-btn">
+                <img id="toggleImage" src="menuicon.png" alt="Menu Icon">
+            </button>
+            <a href="index.html"><img id="companyLogo" src="wings.png" alt="Company Logo"></a>
+        </div>
+		<div class="header-right">
+            <div class="header-icon">
+                <a href="viewCart.php" class="cart-icon"><img src="cart-icon.png" alt="Cart Icon" height="40px" width="40px"></a>
+                 <!--  <span class="cart-count">0</span> You can update this dynamically with JavaScript -->
+            </div>
+            <div class="header-icon">
+                <a href="login.html" class="profile-icon"><img src="profile-icon.png" alt="Profile Icon" height="40px" width="40px"></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <div class="sidebar-parent">
+            <a href="product1.php" class="parent">Products</a>
+            <ul class="productsSub">
+                <li>Armoured Cables</li>
+                <li>Industrial Cables</li>
+                <li>Core Cables</li>
+            </ul>
+        </div>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact</a>
+        <div class="login-menu">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="hero">
+            <h2>Contact us for any further assistance.</h2>
+        </div>
+
+        <section class="centerit">
+		<h2>Company's active hours:</h2>
+    <ul>
+        <li>Monday: 8:00 AM - 8:00 PM</li>
+        <li>Tuesday: 8:00 AM - 8:00 PM</li>
+        <li>Wednesday: 8:00 AM - 8:00 PM</li>
+        <li>Thursday: 8:00 AM - 8:00 PM</li>
+        <li>Friday: 8:00 AM - 8:00 PM</li>
+        <li>Saturday: 9:00 AM - 6:00 PM</li>
+        <li>Sunday: Closed</li>
+    </ul>
+        </section>
+
+        <section class="centerit">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:wingsengineering@gmail.com">wingsengineering@gmail.com</a></p> 
+	<p>Phone: +14400...</p>
+	</section>
+	<section class="centerit">
+	<h2>Company Location:</h2>
+	<h4>Address:</h4>
+	<p>Wings Engineering Company, 301, W Masi St, Madurai Main, Madurai, Tamil Nadu 625001</p>
+    </section>
+	<br>
+	
+    <div class="google-map" class="centerit">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1491216893833!2d78.11196617395208!3d9.921536074382143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c586b8beefe9%3A0x384ae4378c4844c0!2sWings%20Engineering%20Company!5e0!3m2!1sen!2sin!4v1705644751736!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wings Engineering. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

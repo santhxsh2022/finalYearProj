@@ -1,0 +1,212 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+}
+
+    body::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+/*bg-vid*/
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover; /* Ensure the video covers the entire background */
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+    #bgvid {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+    #bgvid {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.wrapper {
+    width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+    .input-field label {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 16px;
+        pointer-events: none;
+        transition: 0.15s ease;
+        width: 100%; /* Allow labels to occupy full width */
+        white-space: normal; /* Allow label text to wrap */
+        text-align: center; /* Center align label text */
+    }
+
+    .input-field input, .input-field select {
+        width: 100%;
+        height: 40px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .input-field select {
+        width: 100%;
+        height: 40px;
+        background: transparent; /* Keep the dropdown field transparent */
+        border: 2px solid #ccc; /* Add a border to differentiate from background */
+        outline: none;
+        font-size: 16px;
+        color: #fff; /* Change text color to black for better visibility */
+        padding: 5px; /* Add some padding to improve appearance */
+    }
+
+        /* Style the dropdown container */
+        .input-field select option {
+            background: black; /* Change the background color of dropdown options */
+            color: white; /* Change the text color of dropdown options */
+        }
+
+
+        .input-field input:focus ~ label,
+        .input-field input:valid ~ label,
+        .input-field select:focus ~ label,
+        .input-field select:valid ~ label {
+            font-size: 0.8rem;
+            top: 10px;
+            transform: translateY(-120%);
+        }
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #fff;
+}
+
+#remember {
+    accent-color: #fff;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+    .forget label p {
+        margin-left: 8px;
+    }
+
+.wrapper a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+    .wrapper a:hover {
+        text-decoration: underline;
+    }
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+    button:hover {
+        color: #fff;
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.login{
+    color: #fff;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Adjust the gap between input fields */
+}
+
+/* Adjust input field width to fit the grid */
+.input-field {
+    width: 100%;
+}

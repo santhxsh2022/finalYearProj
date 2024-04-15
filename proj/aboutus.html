@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings Engineering - Electrical Goods</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesWings.css">
+    <script src="script.js" defer></script>
+    <style>
+        p {
+            text-indent: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <button onclick="toggleSidebar()" id="toggleButton" class="toggle-btn">
+                <img id="toggleImage" src="menuicon.png" alt="Menu Icon">
+            </button>
+            <a href="index.html"><img id="companyLogo" src="wings.png" alt="Company Logo"></a>
+        </div>
+		<div class="header-right">
+            <div class="header-icon">
+                <a href="viewCart.php" class="cart-icon"><img src="cart-icon.png" alt="Cart Icon" height="40px" width="40px"></a>
+                 <!--  <span class="cart-count">0</span> You can update this dynamically with JavaScript -->
+            </div>
+            <div class="header-icon">
+                <a href="login.html" class="profile-icon"><img src="profile-icon.png" alt="Profile Icon" height="40px" width="40px"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <div class="sidebar-parent">
+            <a href="product1.php" class="parent">Products</a>
+            <ul class="productsSub">
+                <li>Armoured Cables</li>
+                <li>Industrial Cables</li>
+                <li>Core Cables</li>
+            </ul>
+        </div>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact</a>
+        <div class="login-menu">
+            <a href="login.html">Login</a>
+		</div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="about-main">
+            <h2>About Us &amp; Why We Are The Best in Electric Wires</h2>
+            <p>Wings Engineering, since 1980, a certified company, is a leading manufacturer of various types of wires and cables. The company has established a sound network of distributors and dealers to ensure good pre and after-sales services to our valued customers at very competitive prices. We offer a wide range of products like XLPE Cables, Power Cables, Control Cables, Domestic Wires & FRLS Wires. Our products are used extensively in different projects for corporate buildings, business centers, and malls in UAE, and exclusively in government departments like BHEL, NHPC, NTPC, Power Grid, etc.</p>
+            
+            <div class="services">
+                <div class="column">
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li>Civil Engineering & Planning</li>
+                        <li>Construction Services</li>
+                        <li>Landscape Architecture</li>
+                        <li>Land Surveying</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>&nbsp;</h3> <!-- Empty header to maintain alignment -->
+                    <ul>
+                        <li>Transportation</li>
+                        <li>Water Resources</li>
+                        <li>Subsurface Utility Engineering (SUE)</li>
+                        <li>Utility Locating Services</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Vision, Mission, and Values -->
+            <div class="vision-mission-values">
+                <h2>Vision</h2>
+                <p>To be the leading provider of innovative electrical solutions, delivering exceptional value to our customers, partners, and stakeholders.</p>
+                
+                <h2>Mission</h2>
+                <p>Our mission is to engineer and deliver high-quality electrical goods and services that exceed customer expectations, ensuring sustainable growth and profitability.</p>
+                
+                <h2>Values</h2>
+                <ul>
+                    <li>Quality: We are committed to delivering products and services of the highest quality.</li>
+                    <li>Customer Focus: We prioritize our customers' needs and strive to exceed their expectations.</li>
+                    <li>Innovation: We continuously innovate to provide cutting-edge solutions to our customers.</li>
+                    <li>Integrity: We conduct our business with honesty, transparency, and respect for all stakeholders.</li>
+                    <li>Teamwork: We foster a culture of collaboration, diversity, and mutual respect among our employees.</li>
+                    <li>Sustainability: We are dedicated to minimizing our environmental impact and promoting sustainable practices.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wings Engineering. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form | Wings Engineering</title>
+    <link rel="stylesheet" href="theloginstyle.css">
+</head>
+<body>
+    <div class="video-background">
+        <!--<img src="wp2.jpg">-->
+        <video autoplay muted loop poster="electro.mp4" id="bgvid">
+            <source src="electro.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="wrapper">
+        <form action="register.php" method="post"> <!-- Specify form action here -->
+            <h2>Register</h2>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" id="first-name" name="first" required autocomplete="given-name">
+                    <label for="first-name">First Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="last-name" name="last" required autocomplete="family-name">
+                    <label for="last-name">Last Name</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="email" id="email" name="mail" required autocomplete="email">
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" name="pass" required autocomplete="new-password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="tel" id="phone" name="phno" required autocomplete="tel">
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="address" name="addr" required autocomplete="street-address">
+                    <label for="address">Address</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" id="company-name" name="cname" required autocomplete="organization">
+                    <label for="company-name">Company Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="pin-code" name="pin" required autocomplete="postal-code">
+                    <label for="pin-code">PIN Code</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <select id="country" name="country" onchange="updateStates()" required autocomplete="country">
+                        <option value="" disabled selected>Select Country/Region</option>
+                        <option value="IN">India</option>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <select id="state" name="state" onchange="updateCities()" required autocomplete="region">
+                        <option value="" disabled selected>Select State</option>
+                    </select>
+                </div>
+            </div>
+            <!--<div class="input-group">
+                <div class="input-field">
+                    <select id="city" name="city">
+                        <option value="">Select City</option>
+                        <option value="Madurai">India</option>
+                        <option value="Chennai">United States</option>
+                        <option value="Dindigul">United Kingdom</option>
+                        <option value="Bangalore">Canada</option>
+                        <option value="Mysore">India</option>
+                        <option value="Pondicherry">United States</option>
+                    </select>
+                </div>
+            </div>-->
+            <button type="submit">Register</button>
+            <div class="login">
+                <p>Already have an account? <a href="login.html">Log In</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Sample data for cities mapped to states
+        const citiesByState = {
+            "TN": ["Madurai", "Chennai", "Dindigul"],
+            "KA": ["Bangalore", "Mysore"],
+            "PO": ["Pondicherry"]
+            // Add more states and their respective cities here
+        };
+
+        function updateCities() {
+            const stateSelect = document.getElementById("state");
+            const citySelect = document.getElementById("city");
+            const selectedState = stateSelect.value;
+            citySelect.innerHTML = '<option value="" disabled selected>Select City</option>'; // Clear previous options
+            citiesByState[selectedState].forEach(city => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        }
+
+        function updateStates() {
+            const countrySelect = document.getElementById("country");
+            const stateSelect = document.getElementById("state");
+            const selectedCountry = countrySelect.value;
+            stateSelect.innerHTML = '<option value="" disabled selected>Select State</option>'; // Clear previous options
+            if (selectedCountry === "IN") {
+                const states = ["Tamil Nadu", "Karnataka", "Kerala", "Pondicherry"]; // Sample states for India
+                states.forEach(state => {
+                    const option = document.createElement("option");
+                    option.value = state;
+                    option.textContent = state;
+                    stateSelect.appendChild(option);
+                });
+            } else if (selectedCountry === "USA") {
+                const states = ["New York", "California"]; // Sample states for USA
+                states.forEach(state => {
+                    const option = document.createElement("option");
+                    option.value = state;
+                    option.textContent = state;
+                    stateSelect.appendChild(option);
+                });
+            }
+            // Add more countries and their respective states here
+            // Ensure that the city dropdown is cleared when changing the country
+            const citySelect = document.getElementById("city");
+            citySelect.innerHTML = '<option value="" disabled selected>Select City</option>';
+        }
+    </script>
+</body>
+</html>
+	

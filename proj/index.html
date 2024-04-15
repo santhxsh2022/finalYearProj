@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings Engineering - Electrical Goods</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesWings.css">
+    <script src="script.js" defer></script>
+
+    <!-- Firebase SDK scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button onclick="toggleSidebar()" id="toggleButton" class="toggle-btn">
+                <img id="toggleImage" src="menuicon.png" alt="Menu Icon">
+            </button>
+            <img id="companyLogo" src="wings.png" alt="Company Logo">
+        </div>
+		<div class="header-right">
+            <div class="header-icon">
+                <a href="viewCart.php" class="cart-icon"><img src="cart-icon.png" alt="Cart Icon" height="40px" width="40px"></a>
+                 <!--  <span class="cart-count">0</span> You can update this dynamically with JavaScript -->
+            </div>
+            <div class="header-icon">
+                <a href="login.html" class="profile-icon"><img src="profile-icon.png" alt="Profile Icon" height="40px" width="40px"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <div class="sidebar-parent">
+            <a href="product1.php" class="parent">Products</a>
+            <ul class="productsSub">
+                <li>Armoured Cables</li>
+                <li>Industrial Cables</li>
+                <li>Core Cables</li>
+            </ul>
+        </div>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact</a>
+		<div class="login-menu">
+        <a href="login.html">Login</a>
+    </div>
+</div>
+    </div>
+
+<div class="wallpaper">
+    <div class="text-container">
+        <h1>Welcome to Wings Engineering</h1>
+        <p>Providing high-quality electrical goods and solutions for your business needs.</p>
+    </div>
+</div>
+
+    <br />
+
+    <div class="content" id="content">
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item"><img src="image1.jpg" alt="Image 1"></div>
+            <div class="carousel-item"><img src="image2.png" alt="Image 2"></div>
+            <div class="carousel-item"><img src="image3.jpg" alt="Image 3"></div>
+            <div class="carousel-item"><img src="image4.png" alt="Image 4"></div>
+            <div class="carousel-item"><img src="image5.jpg" alt="Image 5"></div>
+            <div class="carousel-item"><img src="image6.jpg" alt="Image 6"></div>
+            <div class="carousel-item"><img src="image7.jpg" alt="Image 7"></div>
+            <div class="carousel-item"><img src="image8.jpg" alt="Image 8"></div>
+            <div class="carousel-item"><img src="image9.jpg" alt="Image 9"></div>
+        </div>
+
+        <!-- Add previous and next buttons -->
+        <button class="carousel-prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="hero">
+        <h2>Welcome to Wings Engineering</h2>
+    </div>
+
+	<section class="centerit">
+	<div class="home-div1">
+		<h2> Your best Cable Supplier in India </h2>
+		<p>As an industrial cable supplier, Wings Engineering was founded in 1980.</p>
+		<p>Over 23 years of cable sales experience.<br>
+Professional cable and wires products design and purchase guidance service.<br>
+Creating reliable, superior, and valuable cable solutions for energy, construction, and power.</p>
+	</div>
+	</section>
+
+    <section class="centerit">
+        <h2>About Us</h2>
+        <p>Wings Engineering specializes in providing high-quality electrical goods for large enterprises. Our products include large cables, wires, and more.</p>
+    </section>
+
+    <section class="centerit">
+        <h2>Contact Us</h2>
+        <p>If you have any inquiries or need assistance, feel free to contact us at <a href="mailto:info@wingsengineering.com">info@wingsengineering.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Wings Engineering. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
